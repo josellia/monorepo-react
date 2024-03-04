@@ -1,0 +1,18 @@
+{
+  "name": "MONO-REACT",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "josellia",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node-sass": "^4.11.7",
+    "node-sass": "^9.0.0",
+    "sass": "^1.71.1"
+  }
+}

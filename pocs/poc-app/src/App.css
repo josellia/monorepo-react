@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto:ital,wght@0,400;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato;
+  background-color: #070606;
+}
+.header-container {
+  display: flex;
+}
+.container-logo {
+  width: calc(100% - 100px);
+  color: #fff;
+  border-bottom: 1px solid rgb(223, 27, 190);
+  height: 100px;
+  background: linear-gradient(rgb(65, 62, 62), rgba(12, 11, 11, 0.2) 50%);
+  margin-left: 0;
+}
+.container-aside {
+  background-color: #000;
+
+  /* height: 100vh; */
+  height: 100vh;
+  width: 100px;
+  color: #fff;
+  opacity: 0.6;
+  background: linear-gradient(white, rgba(22, 22, 22, 0.2) 50%);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  /* background: #0a0a0a; */
+  /* opacity: 0.25; */
+  color: #fff;
+
+  width: 100%;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(42, 164, 221);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.img-game {
+  width: 60px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+}
+.logo img {
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+}
+.social-media {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.social-media img {
+  width: 40px;
+  height: 40px;
+}
+
+.container-imgs {
+  display: flex;
+}
+
+/* PRIMEIRA SECTION */
+.content {
+  width: 800px;
+  /* background-color: blue;  */
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: -550px;
+  background: linear-gradient(#0a0a0a33, #242323 50%);
+  /* filter: 'opacity(0.1)'; */
+}
+
+
+.content h1 {
+  color: #0cc5f3;
+  font-family: 'Roboto', sans-serif;
+}
+.content p {
+  color: #df1bbe;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+.content-main {
+  margin-top: 30px;
+  display: flex;
+  /* background-color: orange; */
+  width: 100%;
+  padding: 10px;
+}
+.content-main h6 {
+  color: #0cc5f3;
+  font-family: 'Protest Riot', sans-serif;
+  text-align: center;
+}
+.mascot-choose {
+}
+.content-mascots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  flex-direction: column;
+  cursor: pointer;
+
+  /* background-color: purple; */
+}
+.content-mascots img {
+  width: 100px;
+}
+
+/* ANIMATIONS background*/
+
+/* VARIABLE CSS */
+.ligth-mode {
+  --font-color: #101212;
+  --body-bg-color: #fff;
+}
+.dark-mode {
+  --font-color: #ccc;
+  --body-bg-color: #101212;
+}

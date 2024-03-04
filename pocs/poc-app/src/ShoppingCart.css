@@ -1,0 +1,16 @@
+.smart-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cart {
+    width: 210px;
+  }
+  
+  .egg {
+    width: 110px;
+  }
+  
+  .ice {
+    width: 50px;
+  }
+  
