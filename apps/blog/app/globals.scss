@@ -1,4 +1,6 @@
 @import '@financekids/ui/src/style-guide/global.scss';
 p {
-  color:$color;
+ 
+  @include text($color, $fontSize, 'Arial', 900);
+  
 }
