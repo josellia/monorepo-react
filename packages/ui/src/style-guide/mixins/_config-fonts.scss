@@ -5,3 +5,9 @@
  font-weight: $fontWeight;
 }
 
+
+@mixin button($background, $border, $color:null){
+    background-color: $background;
+    border: $border;
+    color: $color;
+}

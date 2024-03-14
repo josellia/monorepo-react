@@ -6,7 +6,7 @@ import './globals.scss';
 export default function Home() {
   return (
     <main >
-         <Button label="Aqui vou eu"></Button>
+         <Button label="Aqui vou eu" className={"primary"}>Clique aqui</Button>
    <p>Teste</p>
         
     </main>

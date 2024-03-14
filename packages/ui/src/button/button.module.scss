@@ -1,0 +1,10 @@
+@import '../style-guide/global';
+
+$border-primary:  1px solid rgb(47, 47, 180);
+.basic{
+  cursor: pointer;
+  background-color: red;
+}
+.primary {
+@include button($primary-color, $border-primary);
+}
