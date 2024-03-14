@@ -15,7 +15,7 @@ export interface ButtonProps extends Partial<Props> {}
 export const Button = ({ label, onclick, className, type, children }: ButtonProps) => {
 	return (
 		<button
-			className={`styles.basic ${className}`}
+			className={`${styles.basic} ${className || 'primary'}`}
 			aria-label={label}
 			type={type}
 			onClick={onclick}
