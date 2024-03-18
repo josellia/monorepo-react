@@ -1,10 +1,75 @@
 @import '../style-guide/global';
 
-$border-primary:  1px solid rgb(47, 47, 180);
+$border-primary:  1px solid rgb(238, 165, 30);
+$variableMap:(
+    primary: (
+      background: $primary-color,
+      border: $border-primary,
+    ),
+    info: (
+      background: $info-color,
+      border: $border-primary,
+    )
+ 
+);
+
+@mixin button-style() {
+  @each $variable-group, $ruleset in $variableMap {
+    &--#{$variable-group} {
+      background-color: map-get($ruleset, background);
+      border: map-get($ruleset, border);
+    }
+  }
+}
 .basic{
   cursor: pointer;
-  background-color: red;
+  min-width: 120px;
+  padding: 0.6rem 1.6rem;
+  margin: 0.3em;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+
+  @include button-style;
 }
-.primary {
-@include button($primary-color, $border-primary);
+.basic:hover {
+  animation: boing 600ms ease-in-out !important;
 }
+
+// .primary {
+  
+// @include button($primary-color, $border-primary);
+// }
+
+/*SIZES*/
+.medium {
+  width: 50%;
+}
+.large {
+  width: 100%;
+}
+/*ANIMATION*/
+@keyframes boing {
+  15%,
+  40%,
+  75%,
+  100% {
+    transform-origin: center center;
+  }
+  15% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+// Create varition button
