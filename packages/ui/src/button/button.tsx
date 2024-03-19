@@ -1,6 +1,6 @@
 'use client';
-import React, { JSX } from 'react';
-import styles  from './button.module.scss';
+import React, { JSX, useEffect  } from 'react';
+import  './button.scss';
 
 export interface Props {
 	children: JSX.Element | React.ReactElement;
@@ -15,11 +15,24 @@ export interface Props {
 
 export interface ButtonProps extends Partial<Props> {}
 
-export const Button = ({ label, onclick, className, type, children, isDisabled }: ButtonProps) => {
-	
+export const Button = ({ label, onclick, className, type, children, isDisabled, variant }: ButtonProps) => {
+	function classNamesMap(classes: Object):string {
+		return Object.entries(classes)
+		.filter(([key, value]) => value)
+		.map(([key, value]) => key)
+		.join(' ');
+	  }
+
+	  const styleClasses = {
+		'basic--primary': variant === 'primary',
+		'basic--info': variant === 'info',
+	}
+	const styleClass  = classNamesMap(styleClasses);
+
+
 	return (
 		<button
-			className={`${styles.basic} ${className}`}
+			className={`basic ${styleClass} ${className}`}
 			aria-label={label}
 			type={type}
 			disabled={isDisabled}
