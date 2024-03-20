@@ -1,0 +1,38 @@
+@import '../style-guide/global';
+
+$variableMap:(
+    primary: (
+      background: $primary-color
+    ),
+    info: (
+      background: $info-color
+    )
+ 
+);
+
+@mixin button-style() {
+  @each $variable-group, $ruleset in $variableMap {
+    &--#{$variable-group} {
+      background-color: map-get($ruleset, background);
+      border: map-get($ruleset, border);
+    }
+  }
+}
+
+$sizeMap:(
+ small: (
+  size: 10%
+ ),
+
+ medium: (size: 50%),
+
+ large:(size: 100%)
+);
+
+@mixin button-size() {
+  @each $sizeGroup, $ruleset in $sizeMap {
+    &--#{$sizeGroup} {
+      width: map-get($ruleset , size );
+    }
+  }
+}

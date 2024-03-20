@@ -1,26 +1,7 @@
 @import '../style-guide/global';
+@import './mixins-button';
 
-$border-primary:  1px solid rgb(238, 165, 30);
-$variableMap:(
-    primary: (
-      background: $primary-color,
-      border: $border-primary,
-    ),
-    info: (
-      background: $info-color,
-      border: $border-primary,
-    )
- 
-);
 
-@mixin button-style() {
-  @each $variable-group, $ruleset in $variableMap {
-    &--#{$variable-group} {
-      background-color: map-get($ruleset, background);
-      border: map-get($ruleset, border);
-    }
-  }
-}
 .basic{
   cursor: pointer;
   min-width: 120px;
@@ -32,21 +13,21 @@ $variableMap:(
   cursor: pointer;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
 
+  &__icon {
+    flex-direction: row-reverse;
+    margin: 0 5px 0 0;
+  }
+
   @include button-style;
+  @include button-size;
 }
 .basic:hover {
-  animation: boing 600ms ease-in-out !important;
+  animation: boing 600ms ease-in-out;
 }
 
 
 
-/*SIZES*/
-.medium {
-  width: 50%;
-}
-.large {
-  width: 100%;
-}
+
 /*ANIMATION*/
 @keyframes boing {
   15%,
