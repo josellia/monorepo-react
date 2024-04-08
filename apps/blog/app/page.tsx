@@ -8,7 +8,7 @@ export default function Home() {
     <main >
       <Button 
       label="Aqui vou eu" 
-      variant="info" 
+      variant="primary" 
       size="small">
         Clique aqui
       </Button>
