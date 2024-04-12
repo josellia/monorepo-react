@@ -4,29 +4,39 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "dev": "tsx watch ./src/index.ts",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
-    "prepare": "husky install"
+    "removeNodeModules": "rm -Rf  node_modules",
+    "clearNode": " pnpm cache clean --force",
+    "prismaDev": "pnpx prisma generate",
+    "prismaStudio": "pnpx prisma studio",
+    "prismaMigrate": "pnpx prisma migrate dev --name init"
   },
   "keywords": [],
   "author": "josellia",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^4.17.21",
     "@types/node": "^20",
     "eslint-config-prettier": "^9.1.0",
-    "express": "^4.19.2",
-    "husky": "^8.0.0",
-    "nodemon": "^3.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "prisma": "^5.12.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@prisma/client": "^5.12.1",
     "dotenv": "^16.4.5",
-    "pg": "^8.11.3",
-    "reflect-metadata": "^0.2.1",
+    "fastify": "^4.26.2",
+    "tsx": "^4.7.2",
     "typeorm": "^0.3.20"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
